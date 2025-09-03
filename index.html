@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CodeRepeater</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Parallax background */
+    .parallax {
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+    }
+
+    /* Fade-in scroll animation */
+    .fade-scroll {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.8s ease-out;
+    }
+    .fade-scroll.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Pulsating download button */
+    .pulse-button {
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+    }
+  </style>
+</head>
+<body class="font-sans text-white">
+
+  <!-- Header avec parallax -->
+  <header class="h-screen parallax bg-gradient-to-r from-purple-500 to-indigo-600 flex flex-col items-center justify-center text-center">
+    <h1 class="text-6xl font-bold mb-4 animate-pulse">🚀 CodeRepeater</h1>
+    <p class="text-2xl mb-8">Exécute ton code Python facilement et autant de fois que tu veux !</p>
+    <a href="CodeRepeaterSetup.exe" 
+       class="bg-white text-purple-600 px-10 py-4 rounded-xl shadow-lg pulse-button hover:bg-gray-200 transition">
+       Télécharger le Setup
+    </a>
+  </header>
+
+  <!-- Fonctionnalités -->
+  <section class="py-20 px-10 bg-gray-900">
+    <div class="max-w-5xl mx-auto text-center mb-12">
+      <h2 class="text-4xl font-bold mb-6">Fonctionnalités</h2>
+      <p class="text-gray-300">Tout ce dont vous avez besoin pour répéter et gérer vos scripts Python facilement.</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-10">
+      <div class="bg-purple-600 p-6 rounded-xl shadow-lg fade-scroll">
+        <h3 class="text-2xl font-bold mb-2">💻 Exécuter du code</h3>
+        <p>Exécute n'importe quel code Python autant de fois que tu veux dans CodeRepeater.exe.</p>
+      </div>
+      <div class="bg-purple-600 p-6 rounded-xl shadow-lg fade-scroll">
+        <h3 class="text-2xl font-bold mb-2">📂 Sauvegarder et charger</h3>
+        <p>Enregistre tes scripts pour les réutiliser plus tard et continue ton travail facilement.</p>
+      </div>
+      <div class="bg-purple-600 p-6 rounded-xl shadow-lg fade-scroll">
+        <h3 class="text-2xl font-bold mb-2">🎉 Interface intuitive</h3>
+        <p>Une interface simple et agréable avec animations et feedback instantané.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Historique / FAQ -->
+  <section class="py-20 px-10 bg-indigo-800">
+    <div class="max-w-4xl mx-auto text-center mb-12">
+      <h2 class="text-4xl font-bold mb-6">Historique des versions / FAQ</h2>
+    </div>
+    <div class="space-y-6 fade-scroll">
+      <div class="bg-indigo-600 p-6 rounded-xl shadow-lg">
+        <h3 class="font-bold text-2xl mb-2">v1.0</h3>
+        <p>Lancement initial de CodeRepeater avec exécution et sauvegarde des scripts.</p>
+      </div>
+      <div class="bg-indigo-600 p-6 rounded-xl shadow-lg">
+        <h3 class="font-bold text-2xl mb-2">v1.1</h3>
+        <p>Ajout de la fonction de chargement de scripts existants et amélioration des performances.</p>
+      </div>
+      <div class="bg-indigo-600 p-6 rounded-xl shadow-lg">
+        <h3 class="font-bold text-2xl mb-2">FAQ</h3>
+        <p>Comment exécuter plusieurs fois ? → Indique le nombre de répétitions et clique sur Exécuter.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-10 bg-gray-900 fade-scroll">
+    <p>© 2025 DarkAngel - CodeRepeater. Tous droits réservés.</p>
+  </footer>
+
+  <script>
+    // Apparition des cartes au scroll
+    const faders = document.querySelectorAll('.fade-scroll');
+    const appearOptions = {
+      threshold: 0.2,
+    };
+    const appearOnScroll = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('show');
+        observer.unobserve(entry.target);
+      });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+      appearOnScroll.observe(fader);
+    });
+  </script>
+</body>
+</html>

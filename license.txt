@@ -1,0 +1,29 @@
+=======================================================
+          LICENCE D’UTILISATION – VERSION TP
+=======================================================
+
+Copyright (c) 2025 DarkAngel. Tous droits réservés.
+
+En installant et en utilisant ce logiciel (ci-après "l’Application"), 
+vous acceptez les conditions suivantes :
+
+1. **Licence personnelle et non transférable**
+   L’Application est concédée à titre personnel pour un usage éducatif ou expérimental uniquement. 
+   Vous ne pouvez pas revendre, distribuer ou modifier l’Application sans autorisation explicite.
+
+2. **Aucune garantie**
+   L’Application est fournie "telle quelle". L’auteur ne garantit pas son bon fonctionnement 
+   et décline toute responsabilité en cas de perte de données, plantage ou autre problème.
+
+3. **Usage interdit**
+   Il est strictement interdit d’utiliser l’Application pour des activités illégales, nuisibles ou malveillantes.
+
+4. **Résiliation**
+   Cette licence est automatiquement résiliée si vous violez l’une de ces conditions.
+
+5. **Acceptation**
+   En cliquant sur "Installer", vous reconnaissez avoir lu et accepté cette licence factice pour le TP.
+
+=======================================================
+                FIN DE LA LICENCE
+=======================================================
